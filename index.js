@@ -51,7 +51,10 @@ Use the higher-order function called getYears to do the following:
 3. Return an array called years containing all of the years in the getFinals data set*/
 
 function getYears(array, getFinals) {
-    
+   let finalYears = array.map(function(getFinals){
+       return getFinals["Year"];
+   })
+   return finalYears;
 }
 
 
@@ -63,9 +66,15 @@ Use the higher-order function getWinners to do the following:
 3. Determines the winner (home or away) of each `finals` game. 
 4. Returns the names of all winning countries in an array called `winners` */ 
 
-function getWinners(/* code here */) {
-    /* code here */
+function getWinners(array, getFinals) {
+    let winArray = array.map(function(getFinals){
+        if(getFinals["Home Team Goals"] > getFinals["Away Team Goals"]){
+            return getFinals["Home Team Name"];
+        } else getFinals["Away Team Name"];
+    });
+    return winArray;  
 }
+
 
 
 
@@ -79,8 +88,11 @@ Use the higher-order function getWinnersByYear to do the following:
 hint: the strings returned need to exactly match the string in step 4.
  */
 
-function getWinnersByYear(/* code here */) {
-    /* code here */
+function getWinnersByYear(array, getYears, getWinners) {
+    let winByYear = array.map(function(getYears, getWinners){
+        return winByYear;
+    });
+    return `In ${getYears[0]}, ${getWinners[0]} won the world cup!`
 }
 
 
