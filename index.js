@@ -89,10 +89,10 @@ hint: the strings returned need to exactly match the string in step 4.
  */
 
 function getWinnersByYear(array, getYears, getWinners) {
-    let winByYear = array.map(function(getYears, getWinners){
-        return winByYear;
+    let winByYear = getWinners(array).map(function(name, index){
+        return `In ${getYears(array)[index]}, ${name} won the world cup!`;
     });
-    return `In ${getYears[0]}, ${getWinners[0]} won the world cup!`
+    return winByYear;
 }
 
 
