@@ -9,7 +9,6 @@ Practice accessing data by console.log-ing the following pieces of data note, yo
 let finalStage = fifaData.filter(function(item){
     return item.Year === 2014 && item.Stage === "Final";                                 
   });
-
 console.log(finalStage[0]["Home Team Name"]);
 //(b) Away Team name for 2014 world cup final
 console.log(finalStage[0]["Away Team Name"]);
@@ -31,14 +30,12 @@ Use getFinals to do the following:
 
 hint - you should be looking at the stage key inside of the objects
 */
-let finalGames = fifaData.filter(getFinals);  
+// let finalGames = fifaData.filter(getFinals);  
 function getFinals(data) {
    data["Stage"] === "Final";
    return data;
 }
 // console.log(finalGames);
-
-
 
 
 
