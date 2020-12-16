@@ -106,8 +106,11 @@ Use the higher order function getAverageGoals to do the following:
  Example of invocation: getAverageGoals(getFinals(fifaData));
 */
 
-function getAverageGoals(/* code here */) {
-   /* code here */
+function getAverageGoals(getFinals) {
+  let average = getFinals.reduce(function(counter, item){
+    return counter += (item["Home Team Goals"] + item["Away Team Goals"]) / getFinals.length;
+  }, 0);
+  return average.toFixed(2);
 }
 
 
